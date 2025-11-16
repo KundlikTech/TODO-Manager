@@ -1,0 +1,54 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(2,6,23,0.55);
+  z-index: 9999;
+}
+
+.modal-box {
+  width: 94%;
+  max-width: 520px;
+  border-radius: 14px;
+  padding: 20px;
+  background: var(--card);
+  box-shadow: 0 14px 40px rgba(2,6,23,0.45);
+  animation: modalIn 220ms ease;
+}
+
+@keyframes modalIn { from { opacity:0; transform: translateY(-8px) scale(0.995)} to { opacity:1; transform: none} }
+
+.modal-box h2 { margin: 0 0 10px 0; font-size: 20px; color: var(--text); }
+
+.modal-input, .modal-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: var(--glass);
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.modal-textarea { min-height: 110px; resize: vertical; }
+
+.modal-buttons { display:flex; justify-content:flex-end; gap:8px; margin-top:8px; }
+
+.save-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cancel-btn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}

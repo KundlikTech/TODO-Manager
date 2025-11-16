@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --glass: rgba(255,255,255,0.7);
+  --shadow: rgba(16,24,40,0.06);
+  --radius: 12px;
+  --transition: 200ms ease;
+}
+
+/* dark theme variables */
+.app-root.dark {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #98a0b3;
+  --accent: #7c5cff;
+  --shadow: rgba(2,6,23,0.6);
+  --glass: rgba(255,255,255,0.04);
+}
+
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background var(--transition), color var(--transition);
+}
+
+.container{
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 20px;
+}
+
+/* subtle responsive */
+@media (max-width: 700px){
+  .container { padding: 12px; margin: 12px; }
+}
+.app-root.dark {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #98a0b3;
+  --accent: #7c5cff;
+  --shadow: rgba(2,6,23,0.6);
+  --glass: rgba(255,255,255,0.04);
+}
+/* Fix badge visibility in dark mode */
+.app-root.dark .badge {
+  color: white !important;
+}
+
+.app-root.dark .badge-completed {
+  background: rgba(16,185,129,0.25);
+  border-color: rgba(16,185,129,0.35);
+}
+
+.app-root.dark .badge-progress {
+  background: rgba(245,158,11,0.25);
+  border-color: rgba(245,158,11,0.35);
+}
+
+.app-root.dark .badge-pending {
+  background: rgba(239,68,68,0.25);
+  border-color: rgba(239,68,68,0.35);
+}

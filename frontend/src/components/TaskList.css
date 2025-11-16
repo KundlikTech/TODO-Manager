@@ -1,0 +1,99 @@
+.tasklist-wrap { margin-top: 8px; }
+
+.tasklist-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom: 12px;
+}
+
+.loader {
+  width:18px; height:18px;
+  border-radius:50%;
+  border:3px solid rgba(0,0,0,0.08);
+  border-top-color: var(--accent);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.cards { display:flex; flex-direction: column; gap: 12px; }
+
+/* Card */
+.task-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px var(--shadow);
+  border: 1px solid rgba(0,0,0,0.03);
+  padding: 14px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  animation: cardIn 250ms ease;
+}
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(8px); }
+  to { opacity:1; transform: translateY(0); }
+}
+.task-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+
+.task-row { display:flex; gap:12px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; }
+
+.task-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+/* Badge */
+.badge {
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight:600;
+  text-transform: capitalize;
+}
+.badge-completed { background: rgba(16,185,129,0.12); color: var(--success); border: 1px solid rgba(16,185,129,0.18); }
+.badge-progress { background: rgba(245,158,11,0.08); color: var(--warning); border: 1px solid rgba(245,158,11,0.12); }
+.badge-pending { background: rgba(239,68,68,0.06); color: var(--danger); border: 1px solid rgba(239,68,68,0.08); }
+
+.task-desc { color: var(--muted); margin-top:6px; max-width:66ch; }
+
+/* Controls */
+.task-controls { display:flex; flex-direction:column; gap:10px; align-items:flex-end; }
+
+.status-select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+  min-width: 150px;
+}
+
+.actions { display:flex; gap:8px; margin-top:4px; }
+.btn { border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-weight:600; }
+.btn-edit { background: var(--accent); color: white; }
+.btn-delete { background: var(--danger); color: white; }
+
+/* small screens */
+@media (max-width: 640px) {
+  .task-row { flex-direction: column; align-items:stretch; }
+  .task-controls { align-items:stretch; }
+  .status-select { width:100%; }
+}
+/* Force select text to white in dark mode */
+.app-root.dark select.status-select {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Fix dropdown arrow color for dark mode */
+.app-root.dark select.status-select::-ms-expand {
+  color: white;
+}
+
+.app-root.dark select.status-select option {
+  background: #0b1220;
+  color: white;
+}
