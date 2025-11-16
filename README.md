@@ -72,7 +72,7 @@ A modern, full-stack **Task Management Application** built to demonstrate a powe
 ## 📦 Project Structure
 
 ```bash
-todo-app/
+TODO-Manager/
 │── screenshots/
 │ ├── home.jpg
 │ ├── dark_mode.jpg
@@ -122,7 +122,7 @@ CREATE TABLE tasks (
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/KundlikTech/TODO-Manager.git
-cd todo-app
+cd TODO-Manager
 ```
 ### 2️⃣ Backend Setup (Java + Spark + JDBC)
 1.Navigate to the backend folder:
