@@ -37,6 +37,24 @@ A modern, full-stack **Task Management Application** built to demonstrate a powe
 * **API Endpoints** for all CRUD (Create, Read, Update, Delete) operations.
 
 ---
+## 📸 Screenshots
+
+### 🏠 Home Screen  
+![Home Screen](https://raw.githubusercontent.com/KundlikTech/TODO-Manager/main/screenshots/home.jpg)
+
+### 🌙 Dark Mode  
+![Dark Mode](https://raw.githubusercontent.com/KundlikTech/TODO-Manager/main/screenshots/dark_mode.jpg)
+
+### ✏️ Edit Task  
+![Edit Task](https://raw.githubusercontent.com/KundlikTech/TODO-Manager/main/screenshots/edit_task.jpg)
+
+### 🗑️ Delete Task  
+![Delete Task](https://raw.githubusercontent.com/KundlikTech/TODO-Manager/main/screenshots/delete_task.jpg)
+
+### 📱 Mobile View  
+![Mobile View](https://raw.githubusercontent.com/KundlikTech/TODO-Manager/main/screenshots/mobile_view.jpg)
+---
+
 
 ## 🛠️ Tech Stack
 
@@ -55,12 +73,12 @@ A modern, full-stack **Task Management Application** built to demonstrate a powe
 
 ```bash
 todo-app/
-── screenshots/
-│ ├── home.png
-│ ├── dark_mode.png
-│ ├── edit_task.png
-│ ├── mobile_view.png
-│ ├── delete_task.png
+│── screenshots/
+│ ├── home.jpg
+│ ├── dark_mode.jpg
+│ ├── edit_task.jpg
+│ ├── mobile_view.jpg
+│ ├── delete_task.jpg
 │── frontend/
 │ ├── src/
 │ │ ├── components/
@@ -82,6 +100,7 @@ todo-app/
 │
 │── README.md
 ```
+---
 ## 💾 Database Setup
 
 Ensure you have a running **MySQL instance**. Then, connect to your MySQL shell and execute the following SQL to set up the database and the `tasks` table:
@@ -98,6 +117,7 @@ CREATE TABLE tasks (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
+---
 ## Local Development Setup
 ### 1️⃣ Clone the Repository
 ```bash
@@ -130,6 +150,7 @@ npm install
 ```bash
 npm run dev
 ```
+---
 ## 🌐 API Endpoints
 The Spark Java backend exposes the following RESTful API endpoints:
 | Method | Endpoint | Description | Example Request Body |
@@ -140,7 +161,7 @@ The Spark Java backend exposes the following RESTful API endpoints:
 | **PUT** | `/tasks/:id` | Updates an entire task. | `{ "title": "New Title", "description": "New Desc", "status": "in-progress" }` |
 | **PUT** | `/tasks/:id/status` | Updates only the status of a task. | `{ "status": "completed" }` |
 | **DELETE** | `/tasks/:id` | Deletes a task by ID. | N/A |
-
+---
 ## 🎯 Future Improvements
 
 * **Authentication (JWT):** Implement user login/signup for multi-user support.
@@ -148,8 +169,9 @@ The Spark Java backend exposes the following RESTful API endpoints:
 * **Subtasks:** Allow tasks to have smaller, nested tasks.
 * **Priority Levels:** Add a field and UI to set task priority (Low, Medium, High).
 * **Calendar Deadlines:** Integrate date/time pickers for due dates.
-
+---
 ## ❤️ Contributing
 Pull requests are welcome! For major changes or new features, please open an issue first to discuss what you would like to change.
+---
 ## 📄 License
 This project is licensed under the MIT License.
